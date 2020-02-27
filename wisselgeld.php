@@ -1,5 +1,7 @@
 <?php
+function omrekenentot() {
     $change = (float)$argv[1];
+
 
     $EUROS = 
         [50 => "euro", 
@@ -21,6 +23,7 @@
         $heleEuros = floor($change);
         $heleCenten = ($change - $heleEuros) * 100;
 
+
         foreach($EUROS as $euro => $type1){
     
             $heleEuros = round($heleEuros,2);
@@ -39,5 +42,5 @@
                 $heleCenten = $heleCenten - ($times * $cent);
             }
         }
-
+}
    
